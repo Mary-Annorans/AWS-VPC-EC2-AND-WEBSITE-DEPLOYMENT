@@ -54,11 +54,15 @@ Configure route tables and the internet gateway.
 
 Enable auto-assign public IP on the public subnet.
 
-📷Placeholder for VPC Network Diagram
 
 
-![VPC Architecture](images/vpc-diagram.png)
-2. 🚀 Launch an EC2 Instance
+
+<img width="2560" height="1344" alt="VPC_image" src="https://github.com/user-attachments/assets/4c32d1f7-1209-4b1a-8cdf-4177e57aa6bd" />
+
+
+
+
+2.  Launch an EC2 Instance
 Use Ubuntu AMI or Amazon Linux 2.
 
 Select a public subnet, enable auto-assigned public IP.
@@ -69,48 +73,50 @@ Allow HTTP (port 80) and SSH (port 22) from your IP.
 
 Launch and SSH into the instance using MobaXterm.
 
-📷 Placeholder for EC2 Instance Screenshot
 
-markdown
-Copy
-Edit
-![EC2 Instance Setup](images/ec2-setup.png)
-3. 🐧 Install Nginx and Git
-bash
-Copy
-Edit
+<img width="2560" height="1440" alt="ec2 instance" src="https://github.com/user-attachments/assets/6fa841c7-b316-43d5-903c-7e2522ae3e72" />
+
+
+3.  Install Nginx and Git
+
 sudo apt update
 sudo apt install nginx git -y
 Enable Nginx:
 
-bash
-Copy
-Edit
+
 sudo systemctl enable nginx
 sudo systemctl start nginx
-4. 📂 Clone and Deploy the Website
+<img width="2560" height="1344" alt="terminal2" src="https://github.com/user-attachments/assets/b2f805a2-a4b7-40b4-89d5-6789807ab481" />
+
+<img width="2560" height="1344" alt="terminal 1" src="https://github.com/user-attachments/assets/12b0165f-807e-478e-af55-d9a8e52486be" />
+
+
+
+4.  Clone and Deploy the Website
 Clone your website repo:
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone  https://github.com/Mary-Annorans/realestate-portal1.git
+
+
+cd realestate-portal1
+
 sudo cp -r * /var/www/html/
+
+
 Test locally:
 
-bash
-Copy
-Edit
-curl http://localhost
-📷 Placeholder for Website Files in Server
 
-markdown
-Copy
-Edit
-![Website Files](images/files-in-server.png)
-5. 🛜 Connect Domain from GoDaddy
+curl http://localhost
+
+
+
+<img width="1920" height="1032" alt="ip-url" src="https://github.com/user-attachments/assets/1d9e1d03-9ba5-42ac-a167-b1d758bbbcd7" />
+
+5.  Connect Domain from GoDaddy
+
+
 Go to GoDaddy DNS settings.
+
 
 Edit the A Record:
 
@@ -120,54 +126,56 @@ Points to: Your EC2 IP (e.g., 54.xx.xx.xx)
 
 TTL: Default (600 seconds or 1 hour)
 
-📷 Placeholder for GoDaddy DNS Setup
 
-markdown
-Copy
-Edit
-![GoDaddy DNS Settings](images/godaddy-dns.png)
-6. 🌐 Verify with DNSChecker
+
+
+6.  Verify with DNSChecker
 Visit dnschecker.org
 
 Enter your domain name and select A Record.
 
 Ensure IP propagation is complete globally.
 
-📷 Placeholder for DNS Checker Result
+<img width="1920" height="1032" alt="dnschecker" src="https://github.com/user-attachments/assets/d57ebb6b-0832-43e7-8edf-72ed6836a841" />
 
-markdown
-Copy
-Edit
-![DNS Propagation](images/dnschecker.png)
-7. ✅ Access Website Online
+
+
+7.  Access Website Online
+   
 Open a browser and navigate to your domain:
-http://yourdomain.com
 
-📷 Placeholder for Final Website Preview
+http://basmarbies.com
 
-markdown
-Copy
-Edit
-![Live Website](images/live-site.png)
-📎 Tools Used
+
+
+
+<img width="1920" height="1032" alt="basmarbies" src="https://github.com/user-attachments/assets/ab68aa64-a25e-440a-b0ea-7402b41498e0" />
+
+
+ Tools Used
+
+ 
 Tool	Purpose
+
+
 AWS VPC	Virtual network infrastructure
+
+
 EC2	Hosting the web server
+
+
 Nginx	Web server software
+
+
 GitHub	Source code repository
+
+
 GoDaddy	Domain name provider
+
+
 MobaXterm	SSH client to access EC2
+
+
 DNSChecker	Verify domain propagation
 
-📁 Folder Structure (Example)
-css
-Copy
-Edit
-mediplus/
-├── index.html
-├── style.css
-├── img/
-├── js/
-├── fonts/
-├── contact.html
-└── ...
+ 
